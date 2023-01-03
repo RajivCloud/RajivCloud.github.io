@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="lift_truck.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" camera-orbit="-816.6deg 99.57deg 1931m" field-of-view="30deg">
+      <button class="Hotspot" slot="hotspot-1" data-position="-137.81385972448737m -73.80168332911211m -39.13068877947194m" data-normal="-0.9999999992246352m 0.00003936233080366482m -0.0000011560900919435443m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">YALE TRUCK</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="-109.17069602543889m 74.75493184004742m -184.64970955192638m" data-normal="0m 0.925376601689677m -0.379049000849844m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">CYLINDER FUEL</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="27.678564904472143m 137.76773905536595m 81.83762127997943m" data-normal="-1.1253637133173712e-16m 0.862052620598812m -0.5068187835101621m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">POWER STEER</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="34.20295811909017m 107.53011115965577m -51.68011161918285m" data-normal="-0.03463037989464477m 0.4245154483649798m 0.9047581836534185m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">CUSHION SEAT</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="137.45070733371958m -97.48580695079986m -191.74940702365836m" data-normal="0.05536692047429152m 0.19479120414289125m 0.9792808028884035m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">REAR TIRE</div>
+      </button><button class="Hotspot" slot="hotspot-6" data-position="136.31943544526527m -94.61115341251698m 230.35698946698926m" data-normal="0.9999999999999574m 7.549789107955824e-8m -2.82129969249735e-7m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">FRONT TIRE</div>
+      </button><button class="Hotspot" slot="hotspot-7" data-position="-94.02391821799081m -135.32289341320492m 344.59537997231496m" data-normal="-2.862318474315479e-16m 0.3537234939358062m 0.935350035996068m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">MAST</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
